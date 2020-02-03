@@ -1,0 +1,97 @@
+h1, h2 {
+  font-family: Lato;
+}
+
+body{
+  background-color: #ccc;
+}
+
+.black-overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,.5);
+}
+
+.spinner{
+  position: relative;
+}
+
+.ball{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 0px solid #fff;
+  background-color: rgba(255,255,255,.2);
+  animation-duration: .5s;
+  animation-name: slidein;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  position: absolute;
+}
+
+/* 8 balls form a circle and offset animations */
+.spinner .ball:nth-child(1){
+  animation-delay: 0s;
+  top:10px;
+  left:40px;
+}
+
+.spinner .ball:nth-child(2){
+  animation-delay: .125s;
+  top:20px;
+  left:60px;
+}
+
+.spinner .ball:nth-child(3){
+  animation-delay: .250s;
+  top:40px;
+  left:70px;
+}
+
+.spinner .ball:nth-child(4){
+  animation-delay: .375s;
+  top:60px;
+  left:60px;
+}
+
+.spinner .ball:nth-child(5){
+  animation-delay: .5s;
+  top:70px;
+  left:40px;
+}
+
+.spinner .ball:nth-child(6){
+  animation-delay: .625s;
+  top:60px;
+  left:20px;
+}
+
+.spinner .ball:nth-child(7){
+  animation-delay: .75s;
+  top:40px;
+  left:10px;
+}
+
+.spinner .ball:nth-child(8){
+  animation-delay: .875s;
+  top:20px;
+  left:20px;
+}
+
+@keyframes slidein {
+  from {
+  transform: scale(2);
+  background-color: rgba(255,255,255,1);
+  }
+
+  to {
+  transform: scale(1);
+  background-color: rgba(255,255,255,.2);
+  }
+}
